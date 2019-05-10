@@ -1,11 +1,13 @@
 package solutions.objectsinjava;
 
-public class Tree {
+public class
+Tree {
 
     Node root;
 
     /**
      * Adds the elements to the tree
+     *
      * @param current
      * @param value
      * @return
@@ -32,6 +34,7 @@ public class Tree {
 
     /**
      * starts the recursion from the root node:
+     *
      * @param value
      */
     public void add(int value) {
@@ -40,7 +43,6 @@ public class Tree {
 
 
     /**
-     *
      * @param node
      */
     public void printElements(Node node) {
@@ -54,6 +56,7 @@ public class Tree {
 
     /**
      * Check if the tree contains value
+     *
      * @param current
      * @param value
      * @return

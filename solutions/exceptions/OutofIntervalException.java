@@ -4,10 +4,9 @@
 
 package solutions.exceptions;
 
-public class OutofIntervalException extends Exception{
+public class OutofIntervalException extends Exception {
 
-     public OutofIntervalException(String message)
-    {
+    public OutofIntervalException(String message) {
         super(message);
     }
 

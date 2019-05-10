@@ -7,7 +7,7 @@ public class DataClass {
     /**
      * Saves the provided object "o" in the output stream.
      */
-    public void saveObject (OutputStream fileOut,Object o) throws IOException {
+    public void saveObject(OutputStream fileOut, Object o) throws IOException {
 
         try {
             //FileOutputStream fileOut =
@@ -22,12 +22,12 @@ public class DataClass {
         }
 
 
-
     }
+
     /**
      * Reads an object from the provided InputStreams and returns it as result.
      */
-    public Object getObject (InputStream fileIn) throws IOException {
+    public Object getObject(InputStream fileIn) throws IOException {
 
         Employee e = null;
         try {
@@ -50,6 +50,7 @@ public class DataClass {
     }
 
 }
+
 class Employee implements java.io.Serializable {
     public String name;
     public String address;

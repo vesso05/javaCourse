@@ -1,4 +1,5 @@
 package solutions.inputandoutput;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,10 +14,7 @@ public class IO {
     private float float_input;
 
 
-
-
-    public void readString()
-    {
+    public void readString() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a string");
         this.str_input = in.nextLine();
@@ -25,8 +23,7 @@ public class IO {
     }
 
 
-    public void readInt()
-    {
+    public void readInt() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an integer");
         this.int_input = in.nextInt();
@@ -34,8 +31,7 @@ public class IO {
 
     }
 
-    public void readChar()
-    {
+    public void readChar() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a char");
         this.char_input = in.nextLine().charAt(0);
@@ -44,8 +40,7 @@ public class IO {
 
     }
 
-    public void readFloat()
-    {
+    public void readFloat() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a float number");
         this.float_input = in.nextFloat();
@@ -57,7 +52,7 @@ public class IO {
     public void readAndWriteToFile(String fileName) {
 
         String fN = fileName;
-        try{
+        try {
 
             File file = new File(fN);
             PrintWriter pw = new PrintWriter(file);
@@ -68,9 +63,7 @@ public class IO {
             this.input = in.nextLine();
 
 
-
-            while (this.input.charAt(0) != '.')
-            {
+            while (this.input.charAt(0) != '.') {
                 pw.write(this.input);
 
                 this.input = in.nextLine();
@@ -85,12 +78,10 @@ public class IO {
         }
 
 
-
     }
 
 
-    public void readAndReverse(String filename) throws IOException
-    {
+    public void readAndReverse(String filename) throws IOException {
 
         FileReader fr = new FileReader(filename);
         BufferedReader in = new BufferedReader(fr);
@@ -116,13 +107,13 @@ public class IO {
 
         OutputStreamWriter osw = new OutputStreamWriter(fos);
 
-        for (String x: list) {
+        for (String x : list) {
 
-           osw.write(x+"\n");
+            osw.write(x + "\n");
 
         }
 
-         osw.close();
+        osw.close();
 
     }
 

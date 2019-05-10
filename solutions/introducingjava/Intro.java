@@ -1,4 +1,5 @@
 package solutions.introducingjava;
+
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -6,32 +7,29 @@ public class Intro {
 
     /**
      * Finds the greatest common divisor of two numbers.
+     *
      * @param a integer entered by the user
      * @param b integer entered by the user
      * @return the greatest common divisor of both
      */
-  public static int gcd(int a, int b)
-  {
-      while (a != b)
-      {
-          if (a > b)
-          {
+    public static int gcd(int a, int b) {
+        while (a != b) {
+            if (a > b) {
 
-              a -= b;
-          }
-           else
-          {
+                a -= b;
+            } else {
 
-              b -= a;
-          }
-      }
-      return a;
+                b -= a;
+            }
+        }
+        return a;
 
-  }
+    }
 
 
     /**
      * Find the least common multiple of two numbers.
+     *
      * @param a integer entered by the user
      * @param b integer entered by the user
      * @return least common multiple of both
@@ -45,18 +43,17 @@ public class Intro {
 
     /**
      * Gets the minimum element of the array
+     *
      * @param array
      * @return the minimum element of the array
      */
-    public int getMinElement(int [] array)
-    {
-      int minValue = array[0];
+    public int getMinElement(int[] array) {
+        int minValue = array[0];
 
 
         for (int i = 1; i < array.length; i++) {
 
-            if ( minValue > array[i] )
-            {
+            if (minValue > array[i]) {
                 minValue = array[i];
             }
         }
@@ -64,17 +61,16 @@ public class Intro {
         return minValue;
 
 
-
     }
 
 
     /**
      * Prints the elements of the array
+     *
      * @param array
      */
-    public void printArray(int[] array)
-    {
-        for (int element:array)
+    public void printArray(int[] array) {
+        for (int element : array)
 
         {
             System.out.print(element);
@@ -88,41 +84,39 @@ public class Intro {
 
     /**
      * Calculate of sum of the elements in the array
+     *
      * @param array
      * @return
      */
-    public int getSum(int [] array)
-    {
+    public int getSum(int[] array) {
         return IntStream.of(array).sum();
     }
 
 
-
     /**
-     *  partitions the intput array and returns the pivot index
-     *  Works in combination with quickSort()
+     * partitions the intput array and returns the pivot index
+     * Works in combination with quickSort()
+     *
      * @param array
      * @param begin
      * @param pivot
      * @return
      */
-    public static int partition(int[] array, int begin, int pivot)
-    {
+    public static int partition(int[] array, int begin, int pivot) {
 
-     int x = array[pivot];
+        int x = array[pivot];
 
-      int i = begin - 1;
+        int i = begin - 1;
 
         int tmp;
 
 
-        for (int k = begin; k <= pivot-1; k++) {
+        for (int k = begin; k <= pivot - 1; k++) {
 
-           int current = array[k];
+            int current = array[k];
 
 
-            if (current < x)
-            {
+            if (current < x) {
                 i++;
 
                 tmp = current;
@@ -134,7 +128,7 @@ public class Intro {
 
         }
 
-       i++;
+        i++;
 
         tmp = array[i];
 
@@ -150,37 +144,37 @@ public class Intro {
 
     /**
      * quicksort main algorithm
+     *
      * @param array
      * @param left
      * @param right
      */
-    public static void quickSort(int[] array, int left, int right )
-    {
+    public static void quickSort(int[] array, int left, int right) {
         int pivot;
-        if (left < right)
-        {
+        if (left < right) {
 
             pivot = partition(array, left, right);
 
-            quickSort(array, left, pivot-1);
-            quickSort(array, pivot+ 1,right);
+            quickSort(array, left, pivot - 1);
+            quickSort(array, pivot + 1, right);
         }
     }
 
     /**
      * Calls the quicksort main algorithm with the right input
+     *
      * @param array
      */
-    public static void sortArray(int[] array)
-    {
+    public static void sortArray(int[] array) {
 
-        quickSort(array, 0, array.length-1);
+        quickSort(array, 0, array.length - 1);
 
     }
 
 
     /**
      * Generates a random string with adjustable length
+     *
      * @param lenght
      */
     public static void generateString(int lenght) {
@@ -203,10 +197,10 @@ public class Intro {
 
     /**
      * Reverses the order of the elements in the array
+     *
      * @param input
      */
-    public static void reverseList(ArrayList input)
-    {
+    public static void reverseList(ArrayList input) {
 
         Collections.reverse(input);
     }

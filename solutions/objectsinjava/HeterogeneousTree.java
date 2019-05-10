@@ -1,4 +1,5 @@
 package solutions.objectsinjava;
+
 public class HeterogeneousTree {
 
     HNode root;
@@ -6,28 +7,25 @@ public class HeterogeneousTree {
 
     /**
      * adds different type of Object to the Tree
+     *
      * @param usedObject
      */
     private void add(HNode usedObject)
 
     {
-        while (true)
-        {
-            if (root == null)
-            {
+        while (true) {
+            if (root == null) {
                 root = usedObject;
                 break;
             }
-            if (root.value < usedObject.value)
-            {
-                root.right = new HNode(usedObject, usedObject.value );
+            if (root.value < usedObject.value) {
+                root.right = new HNode(usedObject, usedObject.value);
                 break;
 
             }
 
-            if (root.value > usedObject.value)
-            {
-                root.left = new HNode(usedObject, usedObject.value );
+            if (root.value > usedObject.value) {
+                root.left = new HNode(usedObject, usedObject.value);
                 break;
 
             }
@@ -37,6 +35,7 @@ public class HeterogeneousTree {
 
 
 }
+
 class HNode {
     int value;
     HNode left;
@@ -44,8 +43,7 @@ class HNode {
     public Object reference;
 
 
-
-    public HNode(Object obj, int input)  {
+    public HNode(Object obj, int input) {
         this.reference = obj;
         this.value = input;
         right = null;
