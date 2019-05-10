@@ -32,5 +32,9 @@ public class Sumator {
         return a.add(b);
     }
 
+    public Integer test(Integer a, Integer b) {
+
+   return  a + a + b 
+   }
 
 }
